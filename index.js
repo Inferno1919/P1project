@@ -7,6 +7,10 @@ const heartFilled = ("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/
 //get initial image when page is loaded
 randDog(breed);
 
+fetch("https://dog.ceo/api/breeds/list/all")
+    .then(response => response.json())
+    .then(parsed => populateList(parsed["message"]));
+
 
 //when like button is pressed it checks if the image has been liked yet and changes the image accordingly
 document.getElementById("likeButton").addEventListener("click", function(){
@@ -38,5 +42,16 @@ function randDog(breed){
             displayDog(parsed["message"]);
         })
     
+    }
+}
+function populateList(options){
+    var keys = Object.keys(options);
+
+    for(var i = 0; i < keys.length; i++){
+        
+        var x = document.getElementById("selectBreed");
+        var option = new Option(keys[i]);
+        x.appendChild(option);
+        
     }
 }
