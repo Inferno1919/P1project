@@ -19,3 +19,7 @@ Heart Button- Likes the current dog and saves the image for later viewing\
 Dropdown Menu- Click to select a specific breed of dog\
 Big Red Button- Displays the first of your already liked dog images\
 Arrow Buttons- Scrolls through your liked dog images\
+
+# Thanks
+
+Thank you to @Dog__CEO on twitter for the wonderful API
