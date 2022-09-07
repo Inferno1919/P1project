@@ -4,6 +4,9 @@ var likeCount = 0;
 //variables for referenced html elements
 const likeButton = document.getElementById("likeButton");
 const randButton = document.getElementById("randButton");
+const liked = document.getElementById("liked");
+const left = document.getElementById("leftArrow");
+const right = document.getElementById("rightArrow");
 
 //make long, reused links into variables
 const heartEmpty = ("https://toppng.com/uploads/preview/black-love-heart-outline-11563250728brya8dxczz.png")
@@ -34,7 +37,15 @@ likeButton.addEventListener("click", function(){
 randButton.addEventListener("click", function(){
     randDog(breed);
 })
+liked.addEventListener("click", function(){
 
+})
+left.addEventListener("click", function(){
+
+})
+right.addEventListener("click", function(){
+
+})
 //displays main dog image
 function displayDog(image){
     document.getElementById("mainDog").src=image;
