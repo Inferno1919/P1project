@@ -22,6 +22,10 @@
     justify-content: center;
     height: 50px;
 }
+#likeCounter{
+    display: flex;
+    justify-content: center;
+}
 .item2{
     min-width: 0;
     max-width: 100%;
