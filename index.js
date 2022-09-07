@@ -1,5 +1,8 @@
 var breed = "";
 var likeCount = 0;
+var currLiked = 0;
+var likedImages = []
+var currentImage = ""
 
 //variables for referenced html elements
 const likeButton = document.getElementById("likeButton");
@@ -38,7 +41,9 @@ randButton.addEventListener("click", function(){
     randDog(breed);
 })
 liked.addEventListener("click", function(){
-
+    displayDog(likedImages[0]);
+    currLiked = 0;
+    likeButton.src= heartFilled;
 })
 left.addEventListener("click", function(){
 
@@ -60,13 +65,15 @@ function randDog(breed){
         fetch("https://dog.ceo/api/breeds/image/random")
             .then(response => response.json())
             .then(function(parsed){
-            displayDog(parsed["message"]);
+                displayDog(parsed["message"]);
+                currentImage = parsed["message"];
         })
     } else{
         fetch(`https://dog.ceo/api/breed/${breed}/images/random`)
             .then(response => response.json())
             .then(function(parsed){
-            displayDog(parsed["message"]);
+                displayDog(parsed["message"]);
+                currentImage = parsed["message"];
         })
     
     }
@@ -92,8 +99,10 @@ function setBreed(newBreed){
 function tracklikes(){
     if(likeButton.src == heartFilled){
         likeCount = likeCount + 1;
+        likedImages.push(currentImage);
     }else{
         likeCount = likeCount - 1;
+        likedImages.splice((likedImages.indexOf(currentImage)), 1);
     }
     document.getElementById("likeCounter").textContent = "You've liked " + likeCount + " Dogs";
 }
