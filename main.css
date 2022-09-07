@@ -30,4 +30,13 @@
     min-width: 0;
     max-width: 20%;
 }
+.item4{
+    display:flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 50px;
+    min-width: 50px;
+    max-width: 30%;
+}
 
