@@ -13,3 +13,12 @@
     align-items: center;
     margin: auto;
 }
+#mainDog{
+    display: flex;
+    justify-content: center;
+}
+#likeButton{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+}
