@@ -26,6 +26,11 @@
     min-width: 0;
     max-width: 100%;
 }
+#randButton{
+    display: flex;
+    justify-content: center;
+    height:100px;
+}
 .item3{
     min-width: 0;
     max-width: 20%;
