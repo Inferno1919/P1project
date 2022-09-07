@@ -47,11 +47,18 @@ liked.addEventListener("click", function(){
     likeButton.src= heartFilled;
 })
 left.addEventListener("click", function(){
-
+    if(currLiked > 0){
+        currLiked = currLiked - 1;
+    }else{
+        currLiked = likedImages.length - 1;
+    }
+    displayDog(likedImages[currLiked]);
+    likeButton.src= heartFilled;
 })
 right.addEventListener("click", function(){
 
 })
+
 //displays main dog image
 function displayDog(image){
     document.getElementById("mainDog").src=image;
