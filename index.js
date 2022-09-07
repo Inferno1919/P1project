@@ -56,7 +56,13 @@ left.addEventListener("click", function(){
     likeButton.src= heartFilled;
 })
 right.addEventListener("click", function(){
-
+    if(currLiked < likedImages.length - 1){
+        currLiked = currLiked + 1;
+    }else{
+        currLiked = 0;
+    }
+    displayDog(likedImages[currLiked]);
+    likeButton.src-heartFilled;
 })
 
 //displays main dog image
