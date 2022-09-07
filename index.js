@@ -22,6 +22,9 @@ document.getElementById("likeButton").addEventListener("click", function(){
         likeButton.src= heartFilled;
     }
 })
+document.getElementById("randButton").addEventListener("click", function(){
+    randDog(breed);
+})
 
 //displays main dog image
 function displayDog(image){
