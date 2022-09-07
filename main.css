@@ -4,3 +4,6 @@
     margin: auto;
     flex-wrap: wrap;
 }
+.break{
+    flex-basis: 100%;
+}
