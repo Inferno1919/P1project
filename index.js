@@ -1,4 +1,5 @@
 var breed = "";
+var likeCount = 0;
 
 //variables for referenced html elements
 const likeButton = document.getElementById("likeButton");
@@ -7,6 +8,7 @@ const randButton = document.getElementById("randButton");
 //make long, reused links into variables
 const heartEmpty = ("https://toppng.com/uploads/preview/black-love-heart-outline-11563250728brya8dxczz.png")
 const heartFilled = ("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png")
+
 
 //get initial image when page is loaded
 randDog(breed);
@@ -25,6 +27,8 @@ likeButton.addEventListener("click", function(){
     }else{
         likeButton.src= heartFilled;
     }
+
+    tracklikes();
 })
 //when the random button is pressed starts the process of getting an appropriate image
 randButton.addEventListener("click", function(){
@@ -71,4 +75,12 @@ function populateList(options){
 //sets the breed variable to the currently selected breed
 function setBreed(newBreed){
     breed = `${newBreed}`;
+}
+function tracklikes(){
+    if(likeButton.src == heartFilled){
+        likeCount = likeCount + 1;
+    }else{
+        likeCount = likeCount - 1;
+    }
+    document.getElementById("likeCounter").textContent = "You've liked " + likeCount + " Dogs";
 }
