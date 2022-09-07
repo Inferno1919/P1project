@@ -48,4 +48,14 @@
     min-width: 50px;
     max-width: 30%;
 }
+#rightArrow{
+    height: 70%;
+    width: 85%;
+    margin: 5%;
+}
+#leftArrow{
+    height: 95%;
+    width: 110%;
+    margin: 1%;
 
+}
