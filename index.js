@@ -7,6 +7,7 @@ const heartFilled = ("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/
 //get initial image when page is loaded
 randDog(breed);
 
+//fetches an updated list of breeds from the api
 fetch("https://dog.ceo/api/breeds/list/all")
     .then(response => response.json())
     .then(parsed => populateList(parsed["message"]));
@@ -44,6 +45,7 @@ function randDog(breed){
     
     }
 }
+//populates the breed selection dropdown
 function populateList(options){
     var keys = Object.keys(options);
 
@@ -52,6 +54,6 @@ function populateList(options){
         var x = document.getElementById("selectBreed");
         var option = new Option(keys[i]);
         x.appendChild(option);
-        
+
     }
 }
