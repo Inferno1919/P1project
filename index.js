@@ -1,5 +1,8 @@
 var breed = "african";
 
+const likeButton = document.getElementById("likeButton");
+const randButton = document.getElementById("randButton");
+
 //make long, reused links into variables
 const heartEmpty = ("https://toppng.com/uploads/preview/black-love-heart-outline-11563250728brya8dxczz.png")
 const heartFilled = ("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png")
@@ -14,7 +17,7 @@ fetch("https://dog.ceo/api/breeds/list/all")
 
 
 //when like button is pressed it checks if the image has been liked yet and changes the image accordingly
-document.getElementById("likeButton").addEventListener("click", function(){
+likeButton.addEventListener("click", function(){
     
     if(likeButton.src == heartFilled){
         likeButton.src= heartEmpty;
@@ -22,7 +25,7 @@ document.getElementById("likeButton").addEventListener("click", function(){
         likeButton.src= heartFilled;
     }
 })
-document.getElementById("randButton").addEventListener("click", function(){
+randButton.addEventListener("click", function(){
     randDog(breed);
 })
 
