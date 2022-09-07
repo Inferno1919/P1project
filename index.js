@@ -1,5 +1,6 @@
-var breed = "african";
+var breed = "";
 
+//variables for referenced html elements
 const likeButton = document.getElementById("likeButton");
 const randButton = document.getElementById("randButton");
 
@@ -36,6 +37,9 @@ function displayDog(image){
 //fetch random dog image based on breed selection
 function randDog(breed){
 
+    var x = document.getElementById("selectBreed");
+    breed = x.options[x.selectedIndex].value;
+
     if(breed == "Select Breed"){
         fetch("https://dog.ceo/api/breeds/image/random")
             .then(response => response.json())
@@ -62,4 +66,7 @@ function populateList(options){
         x.appendChild(option);
 
     }
+}
+function setBreed(newBreed){
+    breed = `${newBreed}`;
 }
