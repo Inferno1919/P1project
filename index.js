@@ -59,6 +59,8 @@ function randDog(breed){
         })
     
     }
+    
+    likeButton.src= heartEmpty;
 }
 //populates the breed selection dropdown
 function populateList(options){
