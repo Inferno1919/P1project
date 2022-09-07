@@ -7,3 +7,9 @@
 .break{
     flex-basis: 100%;
 }
+.item1{
+    max-height: 1000px;
+    max-width: 70%;
+    align-items: center;
+    margin: auto;
+}
