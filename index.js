@@ -1,3 +1,4 @@
+//global variables
 var breed = "";
 var likeCount = 0;
 var currLiked = 0;
@@ -46,6 +47,7 @@ liked.addEventListener("click", function(){
     currLiked = 0;
     likeButton.src= heartFilled;
 })
+//displays the previous liked image in likedImages array
 left.addEventListener("click", function(){
     if(currLiked > 0){
         currLiked = currLiked - 1;
@@ -55,6 +57,7 @@ left.addEventListener("click", function(){
     displayDog(likedImages[currLiked]);
     likeButton.src= heartFilled;
 })
+//displays the next image in the likedImages array
 right.addEventListener("click", function(){
     if(currLiked < likedImages.length - 1){
         currLiked = currLiked + 1;
