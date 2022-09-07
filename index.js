@@ -40,6 +40,7 @@ likeButton.addEventListener("click", function(){
 randButton.addEventListener("click", function(){
     randDog(breed);
 })
+//displays the first image in the likedImages array
 liked.addEventListener("click", function(){
     displayDog(likedImages[0]);
     currLiked = 0;
@@ -96,6 +97,7 @@ function populateList(options){
 function setBreed(newBreed){
     breed = `${newBreed}`;
 }
+//adds or removes likes from the counter
 function tracklikes(){
     if(likeButton.src == heartFilled){
         likeCount = likeCount + 1;
