@@ -26,6 +26,7 @@ likeButton.addEventListener("click", function(){
         likeButton.src= heartFilled;
     }
 })
+//when the random button is pressed starts the process of getting an appropriate image
 randButton.addEventListener("click", function(){
     randDog(breed);
 })
@@ -67,6 +68,7 @@ function populateList(options){
 
     }
 }
+//sets the breed variable to the currently selected breed
 function setBreed(newBreed){
     breed = `${newBreed}`;
 }
